@@ -8,6 +8,7 @@ from django.template import loader
 import sys
 sys.path.append(".")
 from .entry import Entry
+import simplejson as json
 
 
 listings = []
@@ -93,14 +94,25 @@ def get_listing_by_id(request):
         pass
 
 def post_listing(request):
+    print ('_______POST LISTING_________')
     if request.method == 'POST':
-        post_uuid = (int)(request.POST['uuid'])
-        post_title = request.POST['title']
-        post_course = request.POST['course']
-        post_price = (int)(request.POST['price'])
-        post_phone_number = (int)(request.POST['phone_number'])
-        post_nameVendor = request.POST['nameVendor']
-        post_entryPassword = request.POST['entryPassword']
+        print ('request is')
+        print (request)
+        print ('request.POST is')
+        print (request.POST)
+        print ('request.body is')
+        print (request.body)
+        body_unicode = request.body.decode('utf-8')
+        body = json.loads(body_unicode)
+        print ("body is")
+        print (body)
+        post_uuid = (int)(body['uuid'])
+        post_title = body['title']
+        post_course = body['course']
+        post_price = (int)(body['price'])
+        post_phone_number = (int)(body['phone_number'])
+        post_nameVendor = body['nameVendor']
+        post_entryPassword = body['entryPassword']
         try:
             listings.append(
                 Entry (
