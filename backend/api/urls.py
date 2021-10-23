@@ -10,5 +10,6 @@ urlpatterns = [
     path('contact/', views.contact, name = 'Contact'),
     path('register/',views.register, name = 'Register'),
     path('get-listing-by-id/', views.get_listing_by_id, name = 'Search'),
-    path('post-listing', views.post_listing, name = 'Post')
+    path('post-listing/', views.post_listing, name = 'Post'),
+    path('delete-listing/', views.delete_listing, name = 'Delete')
 ]
