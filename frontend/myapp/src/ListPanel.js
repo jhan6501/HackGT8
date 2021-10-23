@@ -23,8 +23,7 @@ function ListPanel() {
         <div>
             {listings && listings.map(list => (
                 <List
-                    course = {list.course}
-                    title = {list.title}
+                    bookDetails = {list}
                 />
             ))}
             This is where our listings of objects to sell will be
