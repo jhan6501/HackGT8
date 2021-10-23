@@ -94,19 +94,27 @@ def get_listing_by_id(request):
 
 def post_listing(request):
     if request.method == 'POST':
-        data = request.data
+        post_uuid = (int)(request.POST['uuid'])
+        post_title = request.POST['title']
+        post_course = request.POST['course']
+        post_price = (int)(request.POST['price'])
+        post_phone_number = (int)(request.POST['phone_number'])
+        post_nameVendor = request.POST['nameVendor']
+        post_entryPassword = request.POST['entryPassword']
         try:
             listings.append(
                 Entry (
-                    uuid = data['uuid'],
-                    title = data['title'], 
-                    course = data['course'], 
-                    price = data['price'], 
-                    phone_number = data['phone_number'], 
-                    nameVendor = data['nameVendor'], 
-                    entryPassword = data['entryPassword']
+                    uuid = post_uuid,
+                    title = post_title, 
+                    course = post_course, 
+                    price = post_price, 
+                    phone_number = post_phone_number, 
+                    nameVendor = post_nameVendor, 
+                    entryPassword = post_entryPassword
                 )
             )
+            print("POSTED SUCCESFULLY")
+            return HttpResponse("<div> POST </div>")
         except:
             return JsonResponse({"ERROR": "Error occurred while posting listing!"})
     else:

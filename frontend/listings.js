@@ -14,7 +14,8 @@ function apiPost() {
       url: 'http://localhost:8000/TexExchange/post-listing',
       data: {
           uuid: '6501',
-          title: 'A course in Jerry Han',
+          title: 'An elementary introduction to Jerry Han',
+          course: 'Jerry 1100',
           price: '99999',
           phone_number: '6173903836',
           nameVendor: 'Jerry Han',
@@ -37,7 +38,7 @@ function apiSearch() {
 }
 
 window.onload = function() {
-    apiCall();
     apiPost();
+    apiCall();
     apiSearch();
 };
