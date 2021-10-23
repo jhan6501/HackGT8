@@ -6,6 +6,7 @@ from django.http import JsonResponse
 from django.template import loader
 
 import sys
+import random
 sys.path.append(".")
 from .entry import Entry
 import simplejson as json
@@ -106,7 +107,9 @@ def post_listing(request):
         body = json.loads(body_unicode)
         print ("body is")
         print (body)
-        post_uuid = (int)(body['uuid'])
+        post_uuid = random.randint(1, 420420)
+        while(UUID_IS_TAKEN(post_uuid)):
+            post_uuid = random.randint(1, 420420)
         post_title = body['title']
         post_course = body['course']
         post_price = (int)(body['price'])
@@ -149,3 +152,9 @@ def delete_listing(request):
             return JsonResponse({"ERROR": "Error occurred while deleting listing!"})
     else:
         pass
+
+def UUID_IS_TAKEN(number):
+    for listing in listings:
+        if (int)listing.uuid == (int)number:
+            return True
+    return False
