@@ -5,18 +5,57 @@ from django.http import HttpResponse
 from django.http import JsonResponse
 from django.template import loader
 
-def index(request):
-    print ('test')
+listings = {}
+
+def home(request):
+    if request.method == 'GET':
+        pass 
+    else:
+        return None
     return HttpResponse("Hello, world. You're at the polls index.")
 
-def api_call(request):
-    data = {
-        'data': 'calix is a dumb fucking freshmen xd',
-    }
+def about(request):
+    if request.method == 'GET':
+        # return HTML containing
+        pass
+    else:
+        return None
     
     return JsonResponse(data)
 
-def penis(request):
-    template = loader.get_template("frontend/test.html")
-    return HttpResponse("gay")
+def market(request):
+    if request.method == 'GET':
+        # return HTML containing all market listings
+        pass
+    elif request.method == 'POST':
+        # create a new market listing
+        listings.
+        pass
+    elif request.method == 'PUT':
+        # update existing market listing
+        pass
+    return HttpResponse("place holder")
 
+def login(request):
+    if request.method == 'POST':
+        # do login
+        pass
+    else:
+        return None
+    return HttpResponse("place holder")
+
+def contact(request):
+    if request.method == 'GET':
+        # return HTML to contact page
+        pass
+    else:
+        return None
+    return HttpResponse("place holder")
+
+def register(request):
+    if request.method == 'GET':
+        # return HTML to register page
+        pass
+    elif request.method == 'POST':
+        # create a new user account
+        pass
