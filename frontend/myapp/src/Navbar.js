@@ -16,10 +16,10 @@ function Navbar() {
     return (
         <div>
             Top nav bar
-            <button onClick={setModalIsOpenToTrue}>Create New Post</button>
+            <button onClick={setModalIsOpenToTrue}>Create New x</button>
             <Modal isOpen = {modalIsOpen}>
                 <button onClick={setModalIsOpenToFalse}>x</button>
-                <Form/>
+                <Form onClick={setModalIsOpenToFalse}/>
             </Modal>
         </div>
     )
