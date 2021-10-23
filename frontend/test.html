@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<head>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+
+    <header>
+        poop
+    </header>
+
+    <p> Hey this is a test div </p>
+
+    <div id = container>
+
+    </div>
+    <script>
+        function apiCall() {
+            $.ajax({
+                url: 'http://localhost:8000/backend/api/',
+                success: function(response) {
+                    console.log(response);
+                }
+            })
+        }
+
+        window.onload = function() {
+            apiCall();
+        };
+        
+    </script>
+</head>
