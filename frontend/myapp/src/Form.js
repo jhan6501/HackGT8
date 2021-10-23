@@ -4,14 +4,15 @@ function Form() {
     return (
         <>
         <ul>
-             <h1>One Piece</h1>
-             <h1>Fullmetal Alchemist: Brotherhood</h1>
-             <h1>Naruto</h1>
-             <h1>Bleach</h1>
-             <h1>Haikyu!!</h1>
-             <h1>Kuroko no Basketball</h1>
-             <h1>My hero academia</h1>
-             <h1>One punch man</h1>   
+             <h1>New Post</h1>
+             <form>
+                 <label for="name">Name: </label>
+                 <input type="text" id="name" name="name"></input><br></br>
+                 <label for="phonenum">Phone Number: </label>
+                 <input type="text" id="phonenum" name="phonenum"></input><br></br>
+                 <label for="price">Price: </label>
+                 <input type="number" id="price" name="price"></input>
+             </form>  
         </ul>     
         </>
     )

@@ -16,7 +16,7 @@ function Navbar() {
     return (
         <div>
             Top nav bar
-            <button onClick={setModalIsOpenToTrue}>Click to Open Modal</button>
+            <button onClick={setModalIsOpenToTrue}>Create New Post</button>
             <Modal isOpen = {modalIsOpen}>
                 <button onClick={setModalIsOpenToFalse}>x</button>
                 <Form/>
