@@ -113,9 +113,27 @@ def post_listing(request):
                     entryPassword = post_entryPassword
                 )
             )
-            print("POSTED SUCCESFULLY")
             return HttpResponse("<div> POST </div>")
         except:
             return JsonResponse({"ERROR": "Error occurred while posting listing!"})
+    else:
+        pass
+
+def delete_listing(request):
+    if request.method == 'POST':
+        post_uuid = (int)(request.POST['uuid'])
+        post_entryPassword = request.POST['entryPassword']
+        try:
+            for listing in listings:
+                if listing.uuid == post_uuid:
+                    if listing.entryPassword == post_entryPassword:
+                        store = listing.__dict__
+                        listings.remove(listing)
+                        return JsonResponse(store)
+                    else:
+                        return JsonResponse({"ERROR": "Wrong password"})
+            return JsonResponse({"ERROR": "Post doesn't exist"})
+        except ValueError:
+            return JsonResponse({"ERROR": "Error occurred while deleting listing!"})
     else:
         pass
