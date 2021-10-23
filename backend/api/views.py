@@ -5,14 +5,16 @@ from django.http import HttpResponse
 from django.http import JsonResponse
 from django.template import loader
 
-from entry import Entry
+import sys
+sys.path.append(".")
+from .entry import Entry
 
 
 listings = []
 print("test work")
 defaultEntry = Entry(2000, "How to Code", "CS101", 69.42, "6782312105", "Alan Tao", "CalixIsDumb")
 listings.append(defaultEntry)
-print(listings)
+print(listings[0])
 
 
 def home(request):
