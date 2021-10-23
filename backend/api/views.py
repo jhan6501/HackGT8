@@ -5,7 +5,15 @@ from django.http import HttpResponse
 from django.http import JsonResponse
 from django.template import loader
 
-listings = {}
+from entry import Entry
+
+
+listings = []
+print("test work")
+defaultEntry = Entry(2000, "How to Code", "CS101", 69.42, "6782312105", "Alan Tao", "CalixIsDumb")
+listings.append(defaultEntry)
+print(listings)
+
 
 def home(request):
     if request.method == 'GET':
@@ -29,6 +37,7 @@ def market(request):
         pass
     elif request.method == 'POST':
         # create a new market listing
+        
         pass
     elif request.method == 'PUT':
         # update existing market listing
