@@ -77,3 +77,17 @@ def get_all_listings(request):
     results = [entry.__dict__ for entry in listings]
     print(results)
     return JsonResponse(results, safe =False)
+
+def get_listing_by_id(request):
+    if request.method == 'GET':
+        id = request.GET['id']
+        for listing in listings:
+            print (id, listing.uuid, id == listing.uuid)
+            if listing.uuid == (int)(id):
+                print("RETURNED SUCCESFULLY")
+                return JsonResponse(listing.__dict__)
+
+        #Search unsuccessful
+        return JsonResponse({"None": "Error"})
+    else: 
+        pass
