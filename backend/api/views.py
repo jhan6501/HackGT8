@@ -91,3 +91,23 @@ def get_listing_by_id(request):
         return JsonResponse({"None": "Error"})
     else: 
         pass
+
+def post_listing(request):
+    if request.method == 'POST':
+        data = request.data
+        try:
+            listings.append(
+                Entry (
+                    uuid = data['uuid'],
+                    title = data['title'], 
+                    course = data['course'], 
+                    price = data['price'], 
+                    phone_number = data['phone_number'], 
+                    nameVendor = data['nameVendor'], 
+                    entryPassword = data['entryPassword']
+                )
+            )
+        except:
+            return JsonResponse({"ERROR": "Error occurred while posting listing!"})
+    else:
+        pass
