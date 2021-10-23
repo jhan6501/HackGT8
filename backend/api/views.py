@@ -11,10 +11,13 @@ from .entry import Entry
 
 
 listings = []
-print("test work")
 defaultEntry = Entry(2000, "How to Code", "CS101", 69.42, "6782312105", "Alan Tao", "CalixIsDumb")
 listings.append(defaultEntry)
-print(listings[0])
+listings.append(defaultEntry)
+listings.append(defaultEntry)
+listings.append(defaultEntry)
+listings.append(defaultEntry)
+
 
 
 def home(request):
@@ -69,3 +72,8 @@ def register(request):
     elif request.method == 'POST':
         # create a new user account
         pass
+
+def get_all_listings(request):
+    results = [entry.__dict__ for entry in listings]
+    print(results)
+    return JsonResponse(results, safe =False)
