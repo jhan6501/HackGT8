@@ -15,7 +15,25 @@ function Form(props) {
         let phonenum = evt.target[4].value
         let name = evt.target[5].value
         let pw = evt.target[6].value
-
+        console.log('clicked submit')
+        const requestOptions = {
+            method: "POST",
+            headers: new Headers({
+                'Content-Type': 'application/x-www-form-urlencoded', // <-- Specifying the Content-Type
+            }),
+            body: JSON.stringify({ 
+                uuid: uuid,
+                title: title,
+                course: course,
+                price: price,
+                phone_number: phonenum,
+                nameVendor: name,
+                entryPassword: pw
+            })
+        };
+        console.log('performing fetch')
+        fetch('http://localhost:8000/TexExchange/post-listing/', requestOptions)
+        console.log('finished')
     }
 
     return (
