@@ -29,7 +29,6 @@ def market(request):
         pass
     elif request.method == 'POST':
         # create a new market listing
-        listings.
         pass
     elif request.method == 'PUT':
         # update existing market listing
