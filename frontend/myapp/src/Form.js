@@ -8,13 +8,13 @@ function Form(props) {
         console.log(evt.target[1].value) // number
         console.log(evt.target[2].value) // price
 
-        let uuid = evt.target[0].value
-        let title = evt.target[1].value
-        let course = evt.target[2].value
-        let price = evt.target[3].value
-        let phonenum = evt.target[4].value
-        let name = evt.target[5].value
-        let pw = evt.target[6].value
+        // let uuid = evt.target[0].value
+        let title = evt.target[0].value
+        let course = evt.target[1].value
+        let price = evt.target[2].value
+        let phonenum = evt.target[3].value
+        let name = evt.target[4].value
+        let pw = evt.target[5].value
         console.log('clicked submit')
         const requestOptions = {
             method: "POST",
@@ -22,7 +22,6 @@ function Form(props) {
                 'Content-Type': 'application/x-www-form-urlencoded', // <-- Specifying the Content-Type
             }),
             body: JSON.stringify({ 
-                uuid: uuid,
                 title: title,
                 course: course,
                 price: price,
@@ -41,10 +40,6 @@ function Form(props) {
         <ul>
              <h1>New Post</h1>
              <form onSubmit={handleSubmit}>
-
-                 <label className = "labels" for="uuid">uuid: </label>
-                 <input type="text" id="uuid" name="uuid" className="textbox"></input><br></br>
-
                  <label className = "labels" for="title">Title: </label>
                  <input type="text" id="titlein" name="title" className="textbox"></input><br></br>
 
