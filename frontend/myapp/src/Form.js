@@ -32,6 +32,9 @@ function Form(props) {
         };
         console.log('performing fetch')
         fetch('http://localhost:8000/TexExchange/post-listing/', requestOptions)
+            .then(results => {
+                props.reload()
+            })
         console.log('finished')
     }
 

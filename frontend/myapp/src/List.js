@@ -33,6 +33,8 @@ function List(props) {
                 {/* <Form onClick={setModalIsOpenToFalse}/> */}
                 <DeleteForm
                     uuid = {props.bookDetails.uuid}
+                    reload = {props.reload}
+                    closeModal = {setModalIsOpenToFalse}
                 />
             </Modal>
         </div>
