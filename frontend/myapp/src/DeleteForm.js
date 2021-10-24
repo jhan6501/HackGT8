@@ -3,10 +3,8 @@ import React from 'react'
 function DeleteForm(props) {
     const handleSubmit = (evt) => {
         evt.preventDefault()
-        console.log("handeling the submit")
 
         let password = evt.target[0].value
-        console.log('clicked submit')
         const requestOptions = {
             method: "POST",
             headers: new Headers({
@@ -24,6 +22,8 @@ function DeleteForm(props) {
             })
             .then(data => {
                 console.log('repsonse is:' + data);
+                props.reload()
+                props.closeModal()
             });
         console.log('finished')
     }
