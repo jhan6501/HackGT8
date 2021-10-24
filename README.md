@@ -14,7 +14,9 @@ Download dependencies that are missing using
 
 ## React Frontend
 Navigate to HACKGT8/frontend/myapp
+
 npm install
+
 npm start
 
 ## Go to localhost:3000
