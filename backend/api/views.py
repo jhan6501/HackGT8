@@ -136,8 +136,10 @@ def post_listing(request):
 
 def delete_listing(request):
     if request.method == 'POST':
-        post_uuid = (int)(request.POST['uuid'])
-        post_entryPassword = request.POST['entryPassword']
+        body_unicode = request.body.decode('utf-8')
+        body = json.loads(body_unicode)
+        post_uuid = (int)(body['uuid'])
+        post_entryPassword = body['entryPassword']
         try:
             for listing in listings:
                 if listing.uuid == post_uuid:
@@ -155,6 +157,6 @@ def delete_listing(request):
 
 def UUID_IS_TAKEN(number):
     for listing in listings:
-        if (int)listing.uuid == (int)number:
+        if (int)(listing.uuid) == (int)(number):
             return True
     return False
