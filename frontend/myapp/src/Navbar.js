@@ -15,8 +15,9 @@ function Navbar(props) {
 
     return (
         <div>
-            {/* <button id="createnew" onClick={setModalIsOpenToTrue}>Create New Post</button>
-            <Modal isOpen = {modalIsOpen}>
+            <iframe id="pic" src="https://giphy.com/embed/LRlblMDrxibqF42H44" frameBorder="0" class="giphy-embed" allowFullScreen></iframe>
+            {/* <button id="createnew" onClick={setModalIsOpenToTrue}>Create New Post!</button>
+            <Modal isOpen = {modalIsOpen} id="modal">
                 <button onClick={setModalIsOpenToFalse}>x</button>
                 <Form 
                     onClick={setModalIsOpenToFalse}

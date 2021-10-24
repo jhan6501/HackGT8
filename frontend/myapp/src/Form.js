@@ -44,27 +44,28 @@ function Form(props) {
     return (
         <>
         <ul>
-             <h1>New Post</h1>
+             <h1 id="newpost">New Post</h1>
              <form onSubmit={handleSubmit}>
+
                  <label className = "labels" for="title">Title: </label>
-                 <input type="text" id="titlein" name="title" className="textbox"></input><br></br>
+                 <input type="text" id="titlein" name="title" className="textbox" size="60"></input><br></br>
 
                  <label className = "labels" for="course">Course: </label>
-                 <input type="text" id="coursein" name="course" className="textbox"></input><br></br>
+                 <input type="text" id="coursein" name="course" className="textbox" size="60"></input><br></br>
 
                  <label className = "labels" for="price">Price: </label>
-                 <input type="number" id="pricein" name="price" className="textbox"></input><br></br>
+                 <input type="number" id="pricein" name="price" className="textbox" size="60"></input><br></br>
 
                  <label className = "labels" for="phonenum">Phone Number: </label>
-                 <input type="text" id="numin" name="phonenum" className="textbox"></input><br></br>
+                 <input type="text" id="numin" name="phonenum" className="textbox" size="60"></input><br></br>
 
                  <label className = "labels" for="name">Name: </label>
-                 <input type="text" id="namein" name="name" className="textbox"></input><br></br>
+                 <input type="text" id="namein" name="name" className="textbox" size="60"></input><br></br>
 
                  <label className = "labels" for="pw">Entry Password: </label>
-                 <input type="text" id="pwin" name="pw" className="textbox"></input><br></br>
+                 <input type="text" id="pwin" name="pw" className="textbox" size="60"></input><br></br>
 
-                 <input type="submit" value="Submit" />
+                 <input id="submit" type="submit" value="Submit" />
              </form>  
         </ul>     
         </>

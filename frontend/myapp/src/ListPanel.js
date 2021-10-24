@@ -50,8 +50,11 @@ function ListPanel(props) {
     console.log(listings)
     return (
         <div>
+            <h1 id="titlename">TecBook</h1>
+            <p id="subtitle">... for broke college students.</p>
+
             <button id="createnew" onClick={setModalIsOpenToTrue}>Create New Post</button>
-            <Modal isOpen = {modalIsOpen}>
+            <Modal isOpen = {modalIsOpen} className="modal">
                 <button onClick={setModalIsOpenToFalse}>x</button>
                 <Form 
                     onClick={setModalIsOpenToFalse}
