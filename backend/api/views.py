@@ -13,12 +13,16 @@ import simplejson as json
 
 
 listings = []
-defaultEntry = Entry(2000, "How to Code", "CS101", 69.42, "6782312105", "Alan Tao", "CalixIsDumb")
-listings.append(defaultEntry)
-listings.append(defaultEntry)
-listings.append(defaultEntry)
-listings.append(defaultEntry)
-listings.append(defaultEntry)
+defaultEntry1 = Entry(2000, "How to Code", "CS101", 69.42, "6782312105", "Alan Tao", "Alan Tao")
+listings.append(defaultEntry1)
+defaultEntry2 = Entry(2001, "Intro to Databases", "CS4400", 20.00, "6173903836", "Jerry Han", "Jerry Han")
+listings.append(defaultEntry2)
+defaultEntry3 = Entry(2341, "Intro to AI", "CS3600", 69.42, "6782312105", "Alan Tao", "Alan Tao")
+listings.append(defaultEntry3)
+defaultEntry4 = Entry(4261, "How to Code", "CS101", 69.42, "6782312105", "Alan Tao", "Alan Tao")
+listings.append(defaultEntry4)
+defaultEntry5 = Entry(9203, "How to Code", "CS101", 69.42, "6782312105", "Alan Tao", "Alan Tao")
+listings.append(defaultEntry5)
 
 
 
@@ -138,6 +142,9 @@ def delete_listing(request):
     if request.method == 'POST':
         body_unicode = request.body.decode('utf-8')
         body = json.loads(body_unicode)
+        print ('________Delete Listing_________')
+        print ('________Body Is________')
+        print (body)
         post_uuid = (int)(body['uuid'])
         post_entryPassword = body['entryPassword']
         try:
@@ -145,7 +152,10 @@ def delete_listing(request):
                 if listing.uuid == post_uuid:
                     if listing.entryPassword == post_entryPassword:
                         store = listing.__dict__
+                        print (listings)
                         listings.remove(listing)
+                        print ("_____Deleted an Entry_____")
+                        print (listings)
                         return JsonResponse(store)
                     else:
                         return JsonResponse({"ERROR": "Wrong password"})
