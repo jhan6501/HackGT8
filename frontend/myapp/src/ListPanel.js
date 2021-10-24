@@ -26,7 +26,6 @@ function ListPanel() {
                     bookDetails = {list}
                 />
             ))}
-            This is where our listings of objects to sell will be
         </div>
     )
 }
