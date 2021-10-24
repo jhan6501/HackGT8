@@ -15,7 +15,7 @@ function Navbar(props) {
 
     return (
         <div>
-            <button id="createnew" onClick={setModalIsOpenToTrue}>Create New Post</button>
+            {/* <button id="createnew" onClick={setModalIsOpenToTrue}>Create New Post</button>
             <Modal isOpen = {modalIsOpen}>
                 <button onClick={setModalIsOpenToFalse}>x</button>
                 <Form 
@@ -23,7 +23,7 @@ function Navbar(props) {
                     reload = {props.reload}
                     closeModal={setModalIsOpenToFalse}
                 />
-            </Modal>
+            </Modal> */}
         </div>
     )
 }
