@@ -13,15 +13,15 @@ import simplejson as json
 
 
 listings = []
-defaultEntry1 = Entry(2000, "How to Code", "CS101", 69.42, "6782312105", "Alan Tao", "Alan Tao")
+defaultEntry1 = Entry(2000, "How to Code", "CS1100", 15.30, "6782312105", "Alan Tao", "Alan Tao")
 listings.append(defaultEntry1)
 defaultEntry2 = Entry(2001, "Intro to Databases", "CS4400", 20.00, "6173903836", "Jerry Han", "Jerry Han")
 listings.append(defaultEntry2)
-defaultEntry3 = Entry(2341, "Intro to AI", "CS3600", 69.42, "6782312105", "Alan Tao", "Alan Tao")
+defaultEntry3 = Entry(2341, "Intro to AI", "CS3600", 52.00, "6782312105", "Alan Tao", "Alan Tao")
 listings.append(defaultEntry3)
-defaultEntry4 = Entry(4261, "How to Code", "CS101", 69.42, "6782312105", "Alan Tao", "Alan Tao")
+defaultEntry4 = Entry(4261, "How to Code", "CS101", 39.20, "6782312105", "Calix Tang", "Calix Tang")
 listings.append(defaultEntry4)
-defaultEntry5 = Entry(9203, "How to Code", "CS101", 69.42, "6782312105", "Alan Tao", "Alan Tao")
+defaultEntry5 = Entry(9203, "How to Code", "CS101", 17.50, "6782312105", "Veronica Zhang", "Veronica Zhang")
 listings.append(defaultEntry5)
 
 
