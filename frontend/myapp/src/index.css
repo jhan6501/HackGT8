@@ -11,3 +11,50 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+.labels{
+  font-family: "Droid Sans";
+  padding: 10px;
+  font-weight: bold;
+}
+
+.textbox{
+  padding: 5px;
+  margin: 10px;
+  line-height: 10px;
+}
+
+#createnew{
+  color: black;
+  font-size: 20px;
+  margin-top: 20px;
+  font-family: Futura;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+.details{
+  font-family: Futura;
+  font-size: 20px;
+}
+
+#onebox{
+  width: 500px;
+  padding: 10px;
+  border: 3px solid gray;
+  margin: 20px;
+}
+
+#onebox:hover{
+  cursor: pointer;
+  box-shadow: 0px 0px 7px #c2c2c2
+}
+
+#title{
+  font-weight: bold;
+  font-size: 38px;
+}
+
+#listid{
+  font-size: 20px;
+}
