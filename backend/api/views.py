@@ -155,6 +155,6 @@ def delete_listing(request):
 
 def UUID_IS_TAKEN(number):
     for listing in listings:
-        if (int)listing.uuid == (int)number:
+        if (int)(listing.uuid) == (int)(number):
             return True
     return False
