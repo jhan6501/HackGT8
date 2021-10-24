@@ -31,12 +31,12 @@ function DeleteForm(props) {
     return (
         <>
         <ul>
-            <h1>Delete Post</h1>
+            <h1 id="newpost">Delete Post</h1>
             <form onSubmit={handleSubmit}>
 
                 <label className = "password" for="password">Password: </label>
-                <input type="text" id="password" name="password" className="textbox"></input><br></br>
-                <input type="submit" value="Submit" />
+                <input type="text" id="password" name="password" className="textbox" size="50"></input><br></br>
+                <input id="submit" type="submit" value="Submit"/>
             </form>  
         </ul>     
         </>

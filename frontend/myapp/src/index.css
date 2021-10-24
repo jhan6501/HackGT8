@@ -12,16 +12,49 @@ code {
     monospace;
 }
 
-.labels{
-  font-family: "Droid Sans";
-  padding: 10px;
+#newpost{
+  font-family: Futura;
   font-weight: bold;
+  font-size: 40px;
+}
+
+.labels{
+  font-family: Futura;
+  font-weight: bold;
+  font-size: 20px;
+  padding-bottom: 5px;
 }
 
 .textbox{
-  padding: 5px;
-  margin: 10px;
-  line-height: 10px;
+  padding-top: 5px;
+  line-height: 30px;
+  font-size: 20px;
+  border-radius: 1px;
+}
+
+#submit{
+  color: black;
+  font-size: 20px;
+  margin-top: 20px;
+  font-family: Futura;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+form  { display: table;      }
+p     { display: table-row;  }
+label { display: table-cell; }
+input { display: table-cell; }
+
+input, label{
+  display: block;
+}
+
+
+.password{
+  font-family: Futura;
+  font-weight: bold;
+  font-size: 20px;
 }
 
 #createnew{
