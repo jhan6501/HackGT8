@@ -1,9 +1,21 @@
 import React, { useState, useEffect } from 'react';
 import List from './List';
+import Form from "./Form";
+import Modal from 'react-modal';
 
 function ListPanel(props) {
 
     const [listings, setListings] = useState(null);
+
+    const [modalIsOpen, setModalIsOpen] = useState(false);
+
+    const setModalIsOpenToTrue =()=>{
+        setModalIsOpen(true)
+    }
+
+    const setModalIsOpenToFalse =()=>{
+        setModalIsOpen(false)
+    }
 
     useEffect(() => {
         // Update the document title using the browser API
@@ -36,14 +48,17 @@ function ListPanel(props) {
 
     console.log("listings are")
     console.log(listings)
-    let reloaded = false
-    if (props.reload && !reloaded) {
-        loadListings()
-        // reloaded = true
-        props.setReload(false)
-    }
     return (
         <div>
+            <button id="createnew" onClick={setModalIsOpenToTrue}>Create New Post</button>
+            <Modal isOpen = {modalIsOpen}>
+                <button onClick={setModalIsOpenToFalse}>x</button>
+                <Form 
+                    onClick={setModalIsOpenToFalse}
+                    reload = {loadListings}
+                    closeModal={setModalIsOpenToFalse}
+                />
+            </Modal>
             {listings && listings.map(list => (
                 <List
                     bookDetails = {list}
