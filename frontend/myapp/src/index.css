@@ -12,16 +12,49 @@ code {
     monospace;
 }
 
-.labels{
-  font-family: "Droid Sans";
-  padding: 10px;
+
+#newpost{
+  font-family: Futura;
   font-weight: bold;
+  font-size: 40px;
+  align-items: center;
+  margin: auto;
+  width: 40%;
+  padding: 10px;
 }
 
-.textbox{
-  padding: 5px;
-  margin: 10px;
-  line-height: 10px;
+#deletepost{
+  font-family: Futura;
+  font-weight: bold;
+  font-size: 40px;
+
+  text-align: center;
+}
+
+.labels, .password{
+  font-family: Futura;
+  font-weight: bold;
+  font-size: 20px;
+  padding-bottom: 5px;
+}
+
+#submit{
+  color: black;
+  font-size: 20px;
+  margin-top: 20px;
+  font-family: Futura;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+.textbox, #password{
+  font-size: 20px;
+  line-height: 30px;
+  border-radius: 1px;
+}
+
+input, label{
+  display: block;
 }
 
 #createnew{
@@ -31,6 +64,33 @@ code {
   font-family: Futura;
   padding-left: 10px;
   padding-right: 10px;
+}
+
+#createnew:hover{
+  cursor: pointer;
+  box-shadow: 0px 0px 7px #c2c2c2
+}
+
+#titlename{
+  font-family: Futura;
+  font-weight: bold;
+  font-size: 80px;
+  color: #fff;
+  text-align: center;
+  animation: glow;
+  padding-right: 80px;
+}
+
+#titlename:hover{
+  color: #fff;
+  text-shadow:
+    0 0 0px #fff,
+    0 0 5px #fff,
+    0 0 10px #fff,
+    0 0 15px #1d6be0,
+    0 0 20px #1d6be0,
+    0 0 50px #1d6be0,
+    0 0 60px #1d6be0;
 }
 
 .details{
@@ -56,5 +116,50 @@ code {
 }
 
 #listid{
-  font-size: 20px;
+  font-size: 15px;
+}
+
+.modal{
+  position: absolute;
+  inset: 40px;
+  border: 1px solid whitesmoke;
+  background: whitesmoke;
+  overflow: auto;
+  border-radius: 4px;
+  outline: none;
+  padding: 20px;
+  width: 700px;
+  margin: 0 auto;
+}
+
+.deletemodal{
+  position: absolute;
+  inset: 40px;
+  border: 1px solid whitesmoke;
+  background: whitesmoke;
+  overflow: auto;
+  border-radius: 4px;
+  outline: none;
+  padding: 20px;
+  width: 600px;
+  height: 300px;
+  margin: 0 auto;
+}
+
+#pic{
+  position: absolute;
+  padding-top: 30px;
+  padding-left: 50px;
+}
+
+#pic:hover{
+  cursor: default;
+}
+
+#subtitle{
+  font-family: Futura;
+  font-size: 23px;
+  align-items: center;
+  margin-top: -50px;
+  padding-bottom: 40px;
 }
