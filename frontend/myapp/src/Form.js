@@ -33,8 +33,13 @@ function Form(props) {
         console.log('performing fetch')
         fetch('http://localhost:8000/TexExchange/post-listing/', requestOptions)
             .then(results => {
-                props.reload()
+                return results.json()
             })
+            .then(data => {
+                console.log('repsonse is:');
+                props.reload(true)
+                props.closeModal()
+            });
         console.log('finished')
     }
 

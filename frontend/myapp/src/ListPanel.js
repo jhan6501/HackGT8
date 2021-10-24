@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import List from './List';
 
-function ListPanel() {
+function ListPanel(props) {
 
     const [listings, setListings] = useState(null);
 
@@ -12,13 +12,14 @@ function ListPanel() {
                 return results.json()
             })
             .then(data => {
-                // console.log(data)
+                console.log("called the api")
                 setListings(data)
                 console.log('finished setting the listings')
+                console.log('printing the listings now')
+                console.log(listings)
             });
         }, []);
-        console.log('printing the listings now')
-        console.log(listings)
+
 
     const loadListings = e => {
         console.log("loadListings called")
@@ -32,6 +33,15 @@ function ListPanel() {
                 console.log('finished setting the listings')
             });
     };
+
+    console.log("listings are")
+    console.log(listings)
+    let reloaded = false
+    if (props.reload && !reloaded) {
+        loadListings()
+        // reloaded = true
+        props.setReload(false)
+    }
     return (
         <div>
             {listings && listings.map(list => (
