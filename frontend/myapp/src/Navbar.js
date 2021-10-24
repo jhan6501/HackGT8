@@ -15,8 +15,7 @@ function Navbar() {
 
     return (
         <div>
-            Top nav bar
-            <button onClick={setModalIsOpenToTrue}>Create New x</button>
+            <button id="createnew" onClick={setModalIsOpenToTrue}>Create New Post</button>
             <Modal isOpen = {modalIsOpen}>
                 <button onClick={setModalIsOpenToFalse}>x</button>
                 <Form onClick={setModalIsOpenToFalse}/>
