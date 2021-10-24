@@ -19,9 +19,9 @@ defaultEntry2 = Entry(2001, "Intro to Databases", "CS4400", 20.00, "6173903836",
 listings.append(defaultEntry2)
 defaultEntry3 = Entry(2341, "Intro to AI", "CS3600", 52.00, "6782312105", "Alan Tao", "Alan Tao")
 listings.append(defaultEntry3)
-defaultEntry4 = Entry(4261, "How to Code", "CS101", 39.20, "6782312105", "Calix Tang", "Calix Tang")
+defaultEntry4 = Entry(4261, "Data Structures and Algorithms", "CS1332", 39.20, "6782312105", "Calix Tang", "Calix Tang")
 listings.append(defaultEntry4)
-defaultEntry5 = Entry(9203, "How to Code", "CS101", 17.50, "6782312105", "Veronica Zhang", "Veronica Zhang")
+defaultEntry5 = Entry(9203, "How to make a Winning HackGT Project", "HACKGT", 17.50, "6782312105", "Veronica Zhang", "Veronica Zhang")
 listings.append(defaultEntry5)
 
 
